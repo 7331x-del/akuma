@@ -2299,3 +2299,18 @@ button:focus-visible {
         transition-duration: 0.001ms !important;
     }
 }
+/* =========================================================
+   REMOVE MESSAGE ORBIT / MOVING DOT
+========================================================= */
+
+.message-content::before,
+.message-content::after {
+    content: none !important;
+    display: none !important;
+    animation: none !important;
+}
+
+.message-section::before,
+.message-section::after {
+    animation: none !important;
+}

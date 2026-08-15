@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#000000">
+
+    <title>AKUMA</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- =========================================
+         ENTER SCREEN
+    ========================================== -->
+
+    <section id="enterScreen" class="enter-screen">
+
+        <div class="enter-noise"></div>
+        <div class="enter-lines"></div>
+        <div class="enter-glow"></div>
+
+        <div class="enter-content">
+
+            <button
+                id="enterButton"
+                class="enter-button"
+                type="button"
+            >
+                <span>ENTER</span>
+                <i aria-hidden="true"></i>
+            </button>
+
+            <div class="enter-hint">
+                CLICK TO CONTINUE
+            </div>
+
+        </div>
+
+        <div class="enter-corner enter-corner-tl"></div>
+        <div class="enter-corner enter-corner-tr"></div>
+        <div class="enter-corner enter-corner-bl"></div>
+        <div class="enter-corner enter-corner-br"></div>
+
+    </section>
+
+
+    <!-- =========================================
+         MAIN WEBSITE
+    ========================================== -->
+
+    <div id="mainWebsite" class="main-website">
+
+        <!-- BACKGROUND -->
+
+        <div class="background-atmosphere" aria-hidden="true"></div>
+
+        <div class="background-vignette" aria-hidden="true"></div>
+
+        <div class="background-grid" aria-hidden="true"></div>
+
+        <div class="scanlines" aria-hidden="true"></div>
+
+        <!-- PHASE 4: ATMOSPHERIC LIGHT -->
+
+        <div
+            id="ambientLight"
+            class="ambient-light"
+            aria-hidden="true"
+        ></div>
+
+        <div
+            class="light-sweep"
+            aria-hidden="true"
+        ></div>
+
+        <div
+            class="screen-breath"
+            aria-hidden="true"
+        ></div>
+
+
+        <!-- WORD RAIN -->
+
+        <div
+            id="wordRain"
+            class="word-rain"
+            aria-hidden="true"
+        >
+            <div class="rain-layer rain-back"></div>
+            <div class="rain-layer rain-middle"></div>
+            <div class="rain-layer rain-front"></div>
+        </div>
+
+
+        <!-- GIANT TYPOGRAPHY -->
+
+        <div
+            class="giant-typography"
+            aria-hidden="true"
+        >
+            <span>AKUMA</span>
+            <span>RAVEN</span>
+            <span>ASH</span>
+        </div>
+
+
+        <!-- PARTICLES -->
+
+        <div
+            id="particles"
+            class="particles"
+            aria-hidden="true"
+        ></div>
+
+
+        <!-- PHASE 6: STATUS -->
+
+        <div
+            class="system-status"
+            aria-hidden="true"
+        >
+            <span class="status-dot"></span>
+            <span>NAV</span>
+        </div>
+
+
+        <!-- MUSIC -->
+
+        <div class="music-control">
+
+            <button
+                id="musicButton"
+                class="music-button"
+                type="button"
+                aria-label="Play background music"
+            >
+
+                <span
+                    class="music-bars"
+                    aria-hidden="true"
+                >
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                    <i></i>
+                </span>
+
+                <span class="music-label">
+                    PLAY
+                </span>
+
+            </button>
+
+            <audio
+                id="bgMusic"
+                loop
+                preload="auto"
+            >
+                <source
+                    src="audio/damned.mp3"
+                    type="audio/mpeg"
+                >
+            </audio>
+
+        </div>
+
+
+        <!-- =========================================
+             HERO
+        ========================================== -->
+
+        <main class="hero">
+
+            <div class="hero-top-label">
+                <span>01 — 05</span>
+                <span>MESSAGES FROM ASH</span>
+            </div>
+
+            <div
+                class="hero-line hero-line-top"
+                aria-hidden="true"
+            ></div>
+
+
+            <!-- MEMORY CARDS -->
+
+            <section
+                class="memories"
+                aria-label="Memories"
+            >
+
+                <!-- MEMORY 01 -->
+
+                <article
+                    class="memory memory-1"
+                    data-message="message1"
+                    tabindex="0"
+                    role="button"
+                    aria-label="Open A Message For You"
+                >
+
+                    <div class="memory-image">
+                        <img
+                            src="images/pic1.jpg"
+                            alt="A Message For You"
+                            loading="eager"
+                        >
+                    </div>
+
+                    <div class="memory-shine"></div>
+
+                    <div class="memory-border"></div>
+
+                    <div class="memory-number">
+                        01
+                    </div>
+
+                    <div class="memory-tag">
+                        MESSAGE
+                    </div>
+
+                    <div class="memory-text">
+                        A MESSAGE
+                        <br>
+                        FOR YOU
+                    </div>
+
+                    <div class="memory-arrow">
+                        ↗
+                    </div>
+
+                    <div class="card-corner card-corner-tl"></div>
+                    <div class="card-corner card-corner-br"></div>
+
+                </article>
+
+
+                <!-- MEMORY 02 -->
+
+                <article
+                    class="memory memory-2"
+                    data-message="message2"
+                    tabindex="0"
+                    role="button"
+                    aria-label="Open Things I Love About You"
+                >
+
+                    <div class="memory-image">
+                        <img
+                            src="images/pic2.jpg"
+                            alt="Things I Love About You"
+                            loading="lazy"
+                        >
+                    </div>
+
+                    <div class="memory-shine"></div>
+
+                    <div class="memory-border"></div>
+
+                    <div class="memory-number">
+                        02
+                    </div>
+
+                    <div class="memory-tag">
+                        LOVE
+                    </div>
+
+                    <div class="memory-text">
+                        THINGS I LOVE
+                        <br>
+                        ABOUT YOU
+                    </div>
+
+                    <div class="memory-arrow">
+                        ↗
+                    </div>
+
+                    <div class="card-corner card-corner-tl"></div>
+                    <div class="card-corner card-corner-br"></div>
+
+                </article>
+
+
+                <!-- MEMORY 03 -->
+
+                <article
+                    class="memory memory-3"
+                    data-message="message3"
+                    tabindex="0"
+                    role="button"
+                    aria-label="Open Thank You"
+                >
+
+                    <div class="memory-image">
+                        <img
+                            src="images/pic3.jpg"
+                            alt="Thank You"
+                            loading="lazy"
+                        >
+                    </div>
+
+                    <div class="memory-shine"></div>
+
+                    <div class="memory-border"></div>
+
+                    <div class="memory-number">
+                        03
+                    </div>
+
+                    <div class="memory-tag">
+                        THANKS
+                    </div>
+
+                    <div class="memory-text">
+                        THANK
+                        <br>
+                        YOU
+                    </div>
+
+                    <div class="memory-arrow">
+                        ↗
+                    </div>
+
+                    <div class="card-corner card-corner-tl"></div>
+                    <div class="card-corner card-corner-br"></div>
+
+                </article>
+
+
+                <!-- MEMORY 04 -->
+
+                <article
+                    class="memory memory-4"
+                    data-message="message4"
+                    tabindex="0"
+                    role="button"
+                    aria-label="Open When You Miss Me"
+                >
+
+                    <div class="memory-image">
+                        <img
+                            src="images/pic4.png"
+                            alt="When You Miss Me"
+                            loading="lazy"
+                        >
+                    </div>
+
+                    <div class="memory-shine"></div>
+
+                    <div class="memory-border"></div>
+
+                    <div class="memory-number">
+                        04
+                    </div>
+
+                    <div class="memory-tag">
+                        MISS ME
+                    </div>
+
+                    <div class="memory-text">
+                        WHEN YOU
+                        <br>
+                        MISS ME
+                    </div>
+
+                    <div class="memory-arrow">
+                        ↗
+                    </div>
+
+                    <div class="card-corner card-corner-tl"></div>
+                    <div class="card-corner card-corner-br"></div>
+
+                </article>
+
+
+                <!-- MEMORY 05 -->
+
+                <article
+                    class="memory memory-5"
+                    data-message="message5"
+                    tabindex="0"
+                    role="button"
+                    aria-label="Open One Last Thing"
+                >
+
+                    <div class="memory-image">
+                        <img
+                            src="images/pic5.png"
+                            alt="One Last Thing"
+                            loading="lazy"
+                        >
+                    </div>
+
+                    <div class="memory-shine"></div>
+
+                    <div class="memory-border"></div>
+
+                    <div class="memory-number">
+                        05
+                    </div>
+
+                    <div class="memory-tag">
+                        LAST
+                    </div>
+
+                    <div class="memory-text">
+                        ONE LAST
+                        <br>
+                        THING
+                    </div>
+
+                    <div class="memory-arrow">
+                        ↗
+                    </div>
+
+                    <div class="card-corner card-corner-tl"></div>
+                    <div class="card-corner card-corner-br"></div>
+
+                </article>
+
+            </section>
+
+
+            <div
+                class="hero-line hero-line-bottom"
+                aria-hidden="true"
+            ></div>
+
+            <div class="hero-bottom-label">
+                <span>CLICK ANY IMAGE</span>
+                <span>TO OPEN</span>
+            </div>
+
+        </main>
+
+
+        <!-- =========================================
+             MESSAGE OVERLAY
+        ========================================== -->
+
+        <section
+            id="messageSection"
+            class="message-section"
+            aria-hidden="true"
+            aria-label="Private message"
+        >
+
+            <div
+                class="message-backdrop"
+                aria-hidden="true"
+            ></div>
+
+            <div
+                class="message-progress"
+                aria-hidden="true"
+            ></div>
+
+
+            <div class="message-box">
+
+                <div class="message-top">
+                    <span>
+                        PRIVATE MESSAGE
+                    </span>
+
+                    <span id="messageCounter">
+                        01 / 05
+                    </span>
+                </div>
+
+
+                <div class="message-corner top-left"></div>
+                <div class="message-corner top-right"></div>
+                <div class="message-corner bottom-left"></div>
+                <div class="message-corner bottom-right"></div>
+
+
+                <button
+                    id="closeMessage"
+                    class="close-message"
+                    type="button"
+                    aria-label="Close message"
+                >
+                    <span></span>
+                    <span></span>
+                </button>
+
+
+                <!-- PHASE 5: MESSAGE TOP DECOR -->
+
+                <div
+                    class="message-orbit"
+                    aria-hidden="true"
+                ></div>
+
+                <div
+                    class="message-content"
+                    id="messageContent"
+                ></div>
+
+
+                <div class="message-footer">
+
+                    <span>
+                        FROM ASH
+                    </span>
+
+                    <span>
+                        TO NAV
+                    </span>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- FOOTER -->
+
+        <footer class="site-footer">
+
+            <div
+                class="footer-line"
+                aria-hidden="true"
+            ></div>
+
+            <p>
+                DESIGNED AND DEVELOPED BY 7331X
+            </p>
+
+            <p>
+                © 2026 — ALL RIGHTS RESERVED
+            </p>
+
+        </footer>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>

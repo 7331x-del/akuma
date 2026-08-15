@@ -1353,6 +1353,50 @@ observer.observe(
     }
 );
 
+// Disable right-click
+document.addEventListener("contextmenu", (e) => {
+    e.preventDefault();
+});
+
+// Disable keyboard shortcuts
+document.addEventListener("keydown", (e) => {
+
+    // F12
+    if (e.key === "F12") {
+        e.preventDefault();
+        return;
+    }
+
+    // Ctrl + U
+    if (e.ctrlKey && e.key.toLowerCase() === "u") {
+        e.preventDefault();
+        return;
+    }
+
+    // Ctrl + Shift + I
+    if (e.ctrlKey && e.shiftKey && e.key.toLowerCase() === "i") {
+        e.preventDefault();
+        return;
+    }
+
+    // Ctrl + Shift + J
+    if (e.ctrlKey && e.shiftKey && e.key.toLowerCase() === "j") {
+        e.preventDefault();
+        return;
+    }
+
+    // Ctrl + Shift + C
+    if (e.ctrlKey && e.shiftKey && e.key.toLowerCase() === "c") {
+        e.preventDefault();
+        return;
+    }
+
+    // Ctrl + S
+    if (e.ctrlKey && e.key.toLowerCase() === "s") {
+        e.preventDefault();
+        return;
+    }
+});
 
 /* =========================================================
    END

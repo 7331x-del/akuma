@@ -336,7 +336,7 @@ button,
 
 
 /* =========================================================
-   PHASE 4 — ATMOSPHERE
+   ATMOSPHERE
 ========================================================= */
 
 .background-atmosphere,
@@ -788,7 +788,7 @@ button,
 
 
 /* =========================================================
-   PHASE 6 — SYSTEM STATUS
+   SYSTEM STATUS
 ========================================================= */
 
 .system-status {
@@ -1086,9 +1086,6 @@ button,
         filter 0.55s ease;
 }
 
-
-/* PHASE 5 CARD DEPTH */
-
 .memory::before {
     content: "";
 
@@ -1317,7 +1314,9 @@ button,
 }
 
 
-/* CARD CORNERS */
+/* =========================================================
+   CARD CORNERS
+========================================================= */
 
 .card-corner {
     position: absolute;
@@ -1427,7 +1426,7 @@ button,
 
 
 /* =========================================================
-   PHASE 5 — RIPPLE
+   RIPPLE
 ========================================================= */
 
 .card-ripple {
@@ -1459,6 +1458,7 @@ button,
 @keyframes cardRipple {
     0% {
         opacity: 1;
+
         transform:
             translate(-50%, -50%)
             scale(0);
@@ -1466,6 +1466,7 @@ button,
 
     100% {
         opacity: 0;
+
         transform:
             translate(-50%, -50%)
             scale(12);
@@ -1661,62 +1662,6 @@ button,
 }
 
 
-/* MESSAGE ORBIT */
-
-.message-orbit {
-    position: absolute;
-
-    width: 180px;
-    height: 180px;
-
-    top: 50%;
-    left: 50%;
-
-    border:
-        1px solid rgba(176, 0, 0, 0.08);
-
-    border-radius: 50%;
-
-    transform:
-        translate(-50%, -50%);
-
-    pointer-events: none;
-
-    animation:
-        orbitSpin
-        18s
-        linear
-        infinite;
-}
-
-.message-orbit::before {
-    content: "";
-
-    position: absolute;
-
-    top: -2px;
-    left: 50%;
-
-    width: 4px;
-    height: 4px;
-
-    border-radius: 50%;
-
-    background: #b00000;
-
-    box-shadow:
-        0 0 12px rgba(176, 0, 0, 0.9);
-}
-
-@keyframes orbitSpin {
-    to {
-        transform:
-            translate(-50%, -50%)
-            rotate(360deg);
-    }
-}
-
-
 /* =========================================================
    MESSAGE HEADER
 ========================================================= */
@@ -1780,18 +1725,21 @@ button,
 .top-right {
     top: 15px;
     right: 15px;
+
     transform: rotate(90deg);
 }
 
 .bottom-left {
     bottom: 15px;
     left: 15px;
+
     transform: rotate(-90deg);
 }
 
 .bottom-right {
     right: 15px;
     bottom: 15px;
+
     transform: rotate(180deg);
 }
 
@@ -2210,11 +2158,6 @@ button,
         line-height: 1.85;
     }
 
-    .message-orbit {
-        width: 120px;
-        height: 120px;
-    }
-
     .enter-button {
         width: 135px;
     }
@@ -2298,19 +2241,4 @@ button:focus-visible {
 
         transition-duration: 0.001ms !important;
     }
-}
-/* =========================================================
-   REMOVE MESSAGE ORBIT / MOVING DOT
-========================================================= */
-
-.message-content::before,
-.message-content::after {
-    content: none !important;
-    display: none !important;
-    animation: none !important;
-}
-
-.message-section::before,
-.message-section::after {
-    animation: none !important;
 }
